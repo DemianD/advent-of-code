@@ -5,6 +5,13 @@
   "license": "MIT",
   "type": "module",
   "prettier": {
-    "singleQuote": true
+    "singleQuote": true,
+    "printWidth": 100
+  },
+  "dependencies": {
+    "jest": "^26.6.3"
+  },
+  "scripts": {
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest"
   }
 }
