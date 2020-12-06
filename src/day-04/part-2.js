@@ -52,4 +52,4 @@ const countValidPassports = (_input) => {
     }).length;
 };
 
-console.log(countValidPassports());
+export default countValidPassports;
