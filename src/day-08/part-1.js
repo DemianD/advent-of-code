@@ -9,10 +9,7 @@ let currentStatement = 0;
 let execute = {
   nop: () => 1,
   jmp: (arg) => Number(arg),
-  acc: (arg) => {
-    accumulator += Number(arg);
-    return 1;
-  },
+  acc: (arg) => ((accumulator += Number(arg)), 1),
 };
 
 while (!set.has(currentStatement)) {
