@@ -23,6 +23,8 @@ const calculateHelper = (node, bags, nodes) => {
     return result[node];
   }
 
+  visitedNodes[node] = true;
+
   if (node === 'other') {
     return false;
   }
