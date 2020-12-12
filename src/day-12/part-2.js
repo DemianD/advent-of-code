@@ -51,16 +51,16 @@ const turn = (degrees) => {
   }
 };
 
-const calculate = (to, value, multiplication = 1) => {
+const calculate = (to, value) => {
   const opposite = opposites[to];
 
   if (positionWaypoint[opposite] > 0) {
     const temp = positionWaypoint[opposite];
 
-    positionWaypoint[opposite] = Math.max(0, temp - value * multiplication);
-    positionWaypoint[to] = Math.max(0, value * multiplication - temp);
+    positionWaypoint[opposite] = Math.max(0, temp - value);
+    positionWaypoint[to] = Math.max(0, value - temp);
   } else {
-    positionWaypoint[to] += value * multiplication;
+    positionWaypoint[to] += value;
   }
 };
 
